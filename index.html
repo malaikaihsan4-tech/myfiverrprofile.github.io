@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Malaika Ihsan | Minimal Logo Designer</title>
+
+<!-- PREMIUM FONTS -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+
+:root {
+  --bg: #0e0e0e;
+  --text: #ffffff;
+  --soft: #aaaaaa;
+  --accent: #c8a97e;
+  --card: #1a1a1a;
+}
+
+.light {
+  --bg: #ffffff;
+  --text: #000000;
+  --soft: #555;
+  --card: #f5f5f5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: 0.3s;
+}
+
+/* NAVBAR */
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 10%;
+  align-items: center;
+}
+
+header h2 {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 1px;
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: var(--soft);
+}
+
+nav a:hover {
+  color: var(--text);
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 52px;
+}
+
+.hero p {
+  margin-top: 10px;
+  color: var(--soft);
+}
+
+/* BUTTON */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: var(--accent);
+  color: #000;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* PORTFOLIO */
+.portfolio {
+  padding: 60px 10%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+  gap: 25px;
+}
+
+.card {
+  background: var(--card);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.card p {
+  padding: 15px;
+  text-align: center;
+  color: var(--soft);
+}
+
+/* ABOUT */
+.section {
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.section h2 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 15px;
+}
+
+.section p {
+  max-width: 600px;
+  margin: auto;
+  color: var(--soft);
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 30px;
+  color: var(--soft);
+}
+
+/* TOGGLE */
+.toggle {
+  cursor: pointer;
+  background: none;
+  border: 1px solid var(--soft);
+  color: var(--text);
+  padding: 5px 12px;
+  border-radius: 20px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <h2>Malaika Ihsan</h2>
+  <nav>
+    <a href="#work">Work</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+    <button class="toggle" onclick="toggleMode()">Mode</button>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Minimal. Elegant. Memorable.</h1>
+  <p>Crafting clean brand identities with purpose and style.</p>
+  <a class="btn" href="https://www.fiverr.com/malaika_teachs">Hire Me on Fiverr</a>
+</section>
+
+<section class="portfolio" id="work">
+  <div class="grid">
+
+    <div class="card">
+      <img src="logo 1.jpeg">
+      <p>Doctor Qureshi – Medical Brand</p>
+    </div>
+
+    <div class="card">
+      <img src="logo fiver.jpeg">
+      <p>Malaika Teaches – Education Brand</p>
+    </div>
+
+    <div class="card">
+      <img src="logo 2.jpeg">
+      <p>Luxury Personal Brand Identity</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="section" id="about">
+  <h2>About Me</h2>
+  <p>
+    I’m Malaika Ihsan, a minimalist logo designer focused on creating clean,
+    modern, and meaningful brand identities. My goal is to turn ideas into
+    simple yet powerful visuals that leave a lasting impression.
+  </p>
+</section>
+
+<section class="section" id="contact">
+  <h2>Let’s Work Together</h2>
+  <p>Available for freelance work on Fiverr.</p>
+  <a class="btn" href="https://www.fiverr.com/malaika_teaches">View My Fiverr Profile</a>
+</section>
+
+<footer>
+  © 2026 Malaika Ihsan — All Rights Reserved
+</footer>
+
+<script>
+function toggleMode() {
+  document.body.classList.toggle("light");
+}
+</script>
+
+</body>
+</html>
